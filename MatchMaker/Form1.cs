@@ -102,13 +102,6 @@ namespace MatchMaker
                     tokens = line.Split(';');
                 }
             }
-
-            for (int i = 0; i < Convert.ToInt32(tokens.LongCount); i++)
-            {
-                Console.WriteLine(tokens[i].ToString());
-            }
-
-
         }
 
         private void CountMinute_SelectedItemChanged(object sender, EventArgs e)

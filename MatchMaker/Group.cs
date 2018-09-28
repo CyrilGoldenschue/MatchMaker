@@ -10,11 +10,12 @@ namespace MatchMaker
     {
         private int Number;
         private Person Coach;
-        private List<Person> Membres;
+        private List<Person> Membres = new List<Person>();
 
         public Group(int number, Person coach)
         {
-
+            Number = number;
+            Coach = coach;
         }
 
         public int GetDiscord()
@@ -25,7 +26,12 @@ namespace MatchMaker
 
         public void AddMember(Person p)
         {
-
+            Membres.Add(p);
+            for (int i = 0; i < Membres.Count; i++)
+            {
+                Console.WriteLine(Membres[i].ToString());
+            }
+            
         }
 
         public Person ExtractMember(int index)

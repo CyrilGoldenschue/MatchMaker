@@ -21,8 +21,13 @@ namespace MatchMaker
 
         public int GetDiscordWith(Person p)
         {
-            int xx = 0;
-            return xx;
+            int Result = 0;
+            for(int i = 0; i < p.Responses.Count; i++)
+            {
+                Result += (int)Math.Pow((Responses[i] - p.Responses[i]), 2); 
+            }
+            //Console.WriteLine(Result);
+            return Result;
         }
 
         public string GetName()

@@ -33,9 +33,11 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblMinute = new System.Windows.Forms.Label();
             this.txtPathFile = new System.Windows.Forms.TextBox();
-            this.txtNbMinute = new System.Windows.Forms.TextBox();
             this.cmdPathFile = new System.Windows.Forms.Button();
+            this.cmdValidate = new System.Windows.Forms.Button();
+            this.CountMinute = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountMinute)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -77,30 +79,41 @@
             this.txtPathFile.Size = new System.Drawing.Size(320, 20);
             this.txtPathFile.TabIndex = 3;
             // 
-            // txtNbMinute
-            // 
-            this.txtNbMinute.Location = new System.Drawing.Point(154, 112);
-            this.txtNbMinute.Name = "txtNbMinute";
-            this.txtNbMinute.Size = new System.Drawing.Size(44, 20);
-            this.txtNbMinute.TabIndex = 4;
-            // 
             // cmdPathFile
             // 
             this.cmdPathFile.Location = new System.Drawing.Point(509, 41);
             this.cmdPathFile.Name = "cmdPathFile";
             this.cmdPathFile.Size = new System.Drawing.Size(75, 23);
             this.cmdPathFile.TabIndex = 5;
-            this.cmdPathFile.Text = "Accepter";
+            this.cmdPathFile.Text = "Parcourir";
             this.cmdPathFile.UseVisualStyleBackColor = true;
-
+            this.cmdPathFile.Click += new System.EventHandler(this.cmdPathFile_Click);
+            // 
+            // cmdValidate
+            // 
+            this.cmdValidate.Location = new System.Drawing.Point(509, 105);
+            this.cmdValidate.Name = "cmdValidate";
+            this.cmdValidate.Size = new System.Drawing.Size(75, 23);
+            this.cmdValidate.TabIndex = 6;
+            this.cmdValidate.Text = "Valider";
+            this.cmdValidate.UseVisualStyleBackColor = true;
+            this.cmdValidate.Click += new System.EventHandler(this.cmdValidate_Click);
+            // 
+            // CountMinute
+            // 
+            this.CountMinute.Location = new System.Drawing.Point(123, 112);
+            this.CountMinute.Name = "CountMinute";
+            this.CountMinute.Size = new System.Drawing.Size(75, 20);
+            this.CountMinute.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CountMinute);
+            this.Controls.Add(this.cmdValidate);
             this.Controls.Add(this.cmdPathFile);
-            this.Controls.Add(this.txtNbMinute);
             this.Controls.Add(this.txtPathFile);
             this.Controls.Add(this.lblMinute);
             this.Controls.Add(this.lblTime);
@@ -108,6 +121,7 @@
             this.Name = "Form1";
             this.Text = "MatchMaker";
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountMinute)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,9 +133,10 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblFile;
         private System.Windows.Forms.Label lblMinute;
-        private System.Windows.Forms.TextBox txtNbMinute;
         private System.Windows.Forms.TextBox txtPathFile;
         private System.Windows.Forms.Button cmdPathFile;
+        private System.Windows.Forms.Button cmdValidate;
+        private System.Windows.Forms.NumericUpDown CountMinute;
     }
 }
 

@@ -91,6 +91,7 @@
             // 
             // cmdValidate
             // 
+            this.cmdValidate.Enabled = false;
             this.cmdValidate.Location = new System.Drawing.Point(509, 105);
             this.cmdValidate.Name = "cmdValidate";
             this.cmdValidate.Size = new System.Drawing.Size(75, 23);
@@ -110,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(857, 816);
             this.Controls.Add(this.CountMinute);
             this.Controls.Add(this.cmdValidate);
             this.Controls.Add(this.cmdPathFile);

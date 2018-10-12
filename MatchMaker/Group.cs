@@ -10,10 +10,11 @@ namespace MatchMaker
     {
         private int Number;
         private Person Coach;
-        private List<Person> Membres = new List<Person>();
+        private List<Person> Membres;
 
         public Group(int number, Person coach)
         {
+            Membres = new List<Person>();
             Number = number;
             Coach = coach;
         }
